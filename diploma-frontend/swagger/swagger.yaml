@@ -1,0 +1,899 @@
+openapi: 3.0.3
+info:
+  title: Swagger Diploma Project
+  version: 1.0.0
+tags:
+  - name: auth
+  - name: catalog
+  - name: basket
+  - name: order
+  - name: payment
+  - name: profile
+  - name: tags
+paths:
+  /sign-in:
+    post:
+      tags:
+        - auth
+      description: 'sign in'
+      parameters:
+        - name: username
+          in: query
+          description: username
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: password
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+        '500':
+          description: unsuccessful operation
+
+
+  /sign-up:
+    post:
+      tags:
+        - auth
+      description: 'sign up'
+      parameters:
+        - name: name
+          in: query
+          description: name
+          required: true
+          schema:
+            type: string
+        - name: username
+          in: query
+          description: username
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: password
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+        '500':
+          description: unsuccessful operation
+
+  /sign-out:
+    post:
+      tags:
+        - auth
+      description: 'sign out'
+      responses:
+        '200':
+          description: successful operation
+
+  /categories:
+    get:
+      tags:
+        - catalog
+      description: 'get catalog menu'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CatalogItems'
+
+  /catalog:
+    get:
+      tags:
+        - catalog
+      description: 'get catalog items'
+      parameters:
+        - name: filter
+          in: query
+          description: search text
+          required: false
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              minPrice:
+                type: number
+              maxPrice:
+                type: number
+              freeDelivery:
+                type: boolean
+                default: false
+              available:
+                type: boolean
+                default: true
+          style: deepObject
+          explode: true
+        - name: currentPage
+          in: query
+          description: page
+          required: false
+          schema:
+            type: number
+            default: 1
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: number
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+            default: date
+            enum:
+              - rating
+              - price
+              - reviews
+              - date
+        - name: sortType
+          in: query
+          required: false
+          schema:
+            type: string
+            default: dec
+            enum:
+              - dec
+              - inc
+        - name: tags
+          in: query
+          description: page
+          required: false
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Tag'
+
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: number
+            default: 20
+
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    $ref: '#/components/schemas/Products'
+                  currentPage:
+                    type: number
+                    example: 5
+                  lastPage:
+                    type: number
+                    example: 10
+
+  /products/popular:
+    get:
+      tags:
+        - catalog
+      description: 'get catalog popular items'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+
+  /products/limited:
+    get:
+      tags:
+        - catalog
+      description: 'get catalog limeted items'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+
+  /sales:
+    get:
+      tags:
+        - catalog
+      description: 'get sales items'
+      parameters:
+        - name: currentPage
+          in: query
+          description: page
+          required: false
+          schema:
+            type: number
+            default: 1
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    $ref: '#/components/schemas/Sales'
+                  currentPage:
+                    type: number
+                    example: 5
+                  lastPage:
+                    type: number
+                    example: 10
+
+  /banners:
+    get:
+      tags:
+        - catalog
+      description: 'get banner items'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+
+  /product/{id}:
+    get:
+      tags:
+        - product
+      description: 'get catalog item'
+      parameters:
+        - name: id
+          in: path
+          description: product id
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductFull'
+
+  /product/{id}/review:
+    post:
+      tags:
+        - product
+      description: 'post product review'
+      parameters:
+        - name: id
+          in: path
+          description: product id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Review'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                xml:
+                  name: reviews
+                items:
+                  $ref: '#/components/schemas/Review'
+
+  /basket:
+    get:
+      tags:
+        - basket
+      description: 'Get items in basket'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductShort'
+    post:
+      tags:
+        - basket
+      description: 'Add item to basket'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              xml:
+                name: item
+              properties:
+                id:
+                  type: number
+                  example: 123
+                count:
+                  type: number
+                  example: 5
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Basket'
+    delete:
+      tags:
+        - basket
+      description: 'Remove item from basket'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              xml:
+                name: item
+              properties:
+                id:
+                  type: number
+                  example: 123
+                count:
+                  type: number
+                  example: 5
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Basket'
+
+  /orders:
+    get:
+      tags:
+        - order
+      description: 'Get active order'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Order'
+    post:
+      tags:
+        - order
+      description: 'Create order'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Basket'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  orderId:
+                    type: number
+                    example: 123
+
+  /orders/{id}:
+    get:
+      tags:
+        - order
+      parameters:
+        - name: id
+          in: path
+          description: order id
+          required: true
+          schema:
+            type: string
+      description: 'Get order'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+    post:
+      tags:
+        - order
+      parameters:
+        - name: id
+          in: path
+          description: order id
+          required: true
+          schema:
+            type: string
+      description: 'Confirm order'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+      responses:
+        '200':
+          description: successful operation
+
+  /payment:
+    post:
+      tags:
+        - payment
+      parameters:
+        - name: id
+          in: path
+          description: order id
+          required: true
+          schema:
+            type: string
+      description: 'Payment'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Payment'
+      responses:
+        '200':
+          description: successful operation
+
+  /profile:
+    get:
+      tags:
+        - profile
+      description: 'Get user profile'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    post:
+      tags:
+        - profile
+      description: 'update user info'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+  /profile/password:
+    post:
+      tags:
+        - profile
+      description: 'update user password'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              xml:
+                name: password
+              properties:
+                password:
+                  type: string
+                  example: 'QWEWETEW12312'
+      responses:
+        '200':
+          description: successful operation
+
+  /profile/avatar:
+    post:
+      tags:
+        - profile
+      description: 'update user avatar'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Image'
+
+  /tags:
+    get:
+      tags:
+        - tags
+      description: 'Get tags'
+      parameters:
+        - name: category
+          in: query
+          description: categoryId
+          required: false
+          schema:
+            type: number
+            default: 123
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Tag'
+
+
+
+components:
+  schemas:
+    CatalogItems:
+      type: array
+      items:
+        $ref: '#/components/schemas/CatalogItem'
+    CatalogItem:
+      type: object
+      xml:
+        name: catalogItem
+      required:
+        - id
+        - title
+      properties:
+        id:
+          type: number
+          example: 123
+        title:
+          type: string
+          example: 'video card'
+        image:
+          $ref: '#/components/schemas/Image'
+        subcategories:
+          type: array
+          xml:
+            name: subcategories
+          items:
+            type: object
+            xml:
+              name: subcategory
+            properties:
+              id:
+                type: number
+                example: 123
+              title:
+                type: string
+                example: 'video card'
+              image:
+                $ref: '#/components/schemas/Image'
+    Products:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProductShort'
+    Sales:
+      type: array
+      items:
+        $ref: '#/components/schemas/SaleItem'
+    ProductShort:
+      required:
+        - id
+        - category
+        - title
+        - price
+        - count
+      type: object
+      xml:
+        name: productShort
+      properties:
+        id:
+          type: number
+          example: 123
+        category:
+          type: number
+          example: 55
+        price:
+          type: number
+          example: 500.67
+        count:
+          type: integer
+          example: 12
+        date:
+          type: string
+          example: 'Thu Feb 09 2023 21:39:52 GMT+0100 (Central European Standard Time)'
+        title:
+          type: string
+          example: 'video card'
+        description:
+          type: string
+          example: 'description of the product'
+        freeDelivery:
+          type: boolean
+          example: true
+        images:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Image'
+        tags:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Tag'
+        reviews:
+          type: integer
+          example: 5
+        rating:
+          type: number
+          example: 4.6
+    SaleItem:
+      required:
+        - id
+        - title
+        - price
+        - salePrice
+      type: object
+      xml:
+        name: saleItem
+      properties:
+        id:
+          type: string
+          example: '123'
+        price:
+          type: number
+          example: 500.67
+        salePrice:
+          type: number
+          example: 200.67
+        dateFrom:
+          type: string
+          example: '2023-05-08'
+        dateTo:
+          type: string
+          example: '2023-05-20'
+        title:
+          type: string
+          example: 'video card'
+        images:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Image'
+    ProductFull:
+      required:
+        - id
+        - category
+        - title
+        - price
+        - count
+      type: object
+      xml:
+        name: productFull
+      properties:
+        id:
+          type: number
+          example: 123
+        category:
+          type: number
+          example: 55
+        price:
+          type: number
+          example: 500.67
+        count:
+          type: integer
+          example: 12
+        date:
+          type: string
+          example: 'Thu Feb 09 2023 21:39:52 GMT+0100 (Central European Standard Time)'
+        title:
+          type: string
+          example: 'video card'
+        description:
+          type: string
+          example: 'description of the product'
+        fullDescription:
+          type: string
+          example: 'full description of the product'
+        freeDelivery:
+          type: boolean
+          example: true
+        images:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Image'
+        tags:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            type: string
+            xml:
+              name: tagId
+        reviews:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Review'
+        specifications:
+          type: array
+          xml:
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Specification'
+
+        rating:
+          type: number
+          example: 4.6
+    Review:
+      type: object
+      xml:
+        name: review
+      properties:
+        author:
+          type: string
+          example: 'Annoying Orange'
+        email:
+          type: string
+          example: 'no-reply@mail.ru'
+        text:
+          type: string
+          example: 'rewrewrwerewrwerwerewrwerwer'
+        rate:
+          type: integer
+          example: 4
+        date:
+          type: string
+          example: '2023-05-05 12:12'
+    Specification:
+      type: object
+      xml:
+        name: specification
+      properties:
+        name:
+          type: string
+          example: 'Size'
+        value:
+          type: string
+          example: 'XL'
+    OrderProduct:
+      allOf:
+        - $ref: '#/components/schemas/ProductShort'
+        - description: 'count - для количества товара в корзине и price их общая цена на момент покупки'
+        - type: object
+        - xml:
+            name: orderProduct
+    Order:
+      type: object
+      xml:
+        name: order
+      properties:
+        id:
+          type: number
+          example: 123
+        createdAt:
+          type: string
+          example: '2023-05-05 12:12'
+        fullName:
+          type: string
+          example: 'Annoying Orange'
+        email:
+          type: string
+          example: 'no-reply@mail.ru'
+        phone:
+          type: string
+          example: '88002000600'
+        deliveryType:
+          type: string
+          example: 'free'
+        paymentType:
+          type: string
+          example: 'online'
+        totalCost:
+          type: number
+          example: 567.8
+        status:
+          type: string
+          example: 'accepted'
+        city:
+          type: string
+          example: 'Moscow'
+        address:
+          type: string
+          example: 'red square 1'
+        products:
+          type: array
+          xml:
+            name: product
+          items:
+            $ref: '#/components/schemas/OrderProduct'
+    Basket:
+      type: array
+      xml:
+        name: basket
+      items:
+        $ref: '#/components/schemas/OrderProduct'
+    Payment:
+      type: object
+      xml:
+        name: payment
+      properties:
+        number:
+          type: string
+          example: '9999999999999999'
+        name:
+          type: string
+          example: 'Annoying Orange'
+        month:
+          type: string
+          example: '02'
+        year:
+          type: string
+          example: '2025'
+        code:
+          type: string
+          example: '123'
+    User:
+      type: object
+      xml:
+        name: user
+      properties:
+        fullName:
+          type: string
+          example: 'Annoying Orange'
+        email:
+          type: string
+          example: 'no-reply@mail.ru'
+        phone:
+          type: string
+          example: '88002000600'
+        avatar:
+          $ref: '#/components/schemas/Image'
+    Tag:
+      type: object
+      xml:
+        name: tag
+      properties:
+        id:
+          type: number
+          example: 12
+        name:
+          type: string
+          example: 'Gaming'
+    Image:
+      type: object
+      xml:
+        name: image
+      properties:
+        src:
+          type: string
+          example: '/3.png'
+        alt:
+          type: string
+          example: 'Image alt string'
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+{% extends "frontend/base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Корзина
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="/">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Корзина</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+        <form class="form Cart" @submit.prevent="submitBasket">
+          {% csrf_token %}
+          <!-- Данные по товару в корзине -->
+          <div v-for="product in Object.values(basket)" class="Cart-product">
+            <div class="Cart-block Cart-block_row">
+              <div class="Cart-block Cart-block_pict"><a class="Cart-pict" :href="`/product/${product.id}`">
+                <img class="Cart-img" :src="product.images[0].src" :alt="product.images[0].alt"/></a>
+              </div>
+              <div class="Cart-block Cart-block_info">
+                <a class="Cart-title" :href="`/product/${product.id}`">${ product.title }$</a>
+<!--                <div class="Cart-desc">${ product.shortDescription }$</div>-->
+              </div>
+              <div class="Cart-block Cart-block_price">
+                <div class="Cart-price">${ product.price }$$
+                </div>
+              </div>
+            </div>
+            <div class="Cart-block Cart-block_row">
+              <div class="Cart-block Cart-block_seller"></div>
+              <div class="Cart-block Cart-block_amount">
+                <div class="Cart-amount">
+                  <div class="Amount">
+                    <button class="Amount-remove" type="button" @click="removeFromBasket(product.id, 1)">
+                    </button>
+                    <input class="Amount-input form-input" name="amount" type="text" :value="product.count"/>
+                    <button class="Amount-add" type="button" @click="addToBasket(product)">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="Cart-block Cart-block_delete">
+                <div class="Cart-delete" @click="removeFromBasket(product.id, product.count)">
+                  <img src="/static/frontend/assets/img/icons/card/delete.svg"
+                       alt="delete.svg"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Данные по товару в корзине -->
+
+          <div class="Cart-total">
+            <div class="Cart-block Cart-block_total">
+              <strong class="Cart-title">Итого:</strong>
+              <span class="Cart-price">${ basketCount.price }$$</span>
+            </div>
+            <div class="Cart-block" v-if="basketCount.count">
+              <button type="submit" class="btn btn_success btn_lg" >Оформить заказ</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block mixins %}
+<script src="{% static 'frontend/assets/js/cart.js' %}"></script>
+{% endblock %}

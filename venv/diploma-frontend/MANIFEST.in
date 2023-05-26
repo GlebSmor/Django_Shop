@@ -1,0 +1,3 @@
+include README.rst
+recursive-include frontend/static *
+recursive-include frontend/templates *

@@ -1,0 +1,21 @@
+{% extends "frontend/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="Auth">
+    <div class="wrapper">
+        <h3 class="sign-in">Регистрация</h3>
+        <form @submit.prevent="signUp()">
+            <input class="user-input" type="text" name="name" id="name" placeholder="Имя"/>
+            <input class="user-input" type="text" name="login" id="login" placeholder="Логин"/>
+            <input type="password" name="password" id="password" placeholder="Пароль"/>
+            <input type="submit" value="Создать аккаунт"/>
+            <a class="sub-link" href="/sign-in">Войти</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block mixins %}
+<script src="{% static 'frontend/assets/js/signUp.js' %}"></script>
+{% endblock %}
