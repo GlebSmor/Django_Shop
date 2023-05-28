@@ -1,7 +1,7 @@
 var mix = {
 	methods: {
 		getHistoryOrder() {
-			this.getData("/api/orders")
+			this.getData("/api/orders/")
 				.then(data => {
 					console.log(data)
 					this.orders = data

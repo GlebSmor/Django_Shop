@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frontend',
     'api',
-    'catalog',
+    'catalog.apps.CatalogConfig',
+    'users.apps.UsersConfig',
+    'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
     'rest_framework',
 ]
 
@@ -51,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'request_logging.middleware.LoggingMiddleware',
+    # 'request_logging.middleware.LoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'megano.urls'
@@ -125,12 +128,18 @@ MEDIA_ROOT = BASE_DIR / 'uploads'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-REST_FRAMEWORK = {
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+REST_FRAMEWORKS = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+        # 'rest_framework.permissions.IsAuthenticated',
+        # 'rest_framework.permissions.IsAdminUser',
+     ),
+    "DEFAULT_PAGINATION_CLASS": "rets_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
-    # "DEFAULT_FILTER_BACKENDS": [
-    #     "django_filters.rest_framework.DjangoFilterBackend",
-    # ]
 }
 
 LOGGING = {
@@ -149,3 +158,5 @@ LOGGING = {
         },
     },
 }
+
+CART_SESSION_ID = 'cart'

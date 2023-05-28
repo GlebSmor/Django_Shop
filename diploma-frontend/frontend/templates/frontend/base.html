@@ -125,7 +125,7 @@
 
                 <div v-if="category.subcategories.length > 0" class="CategoriesButton-submenu">
                   <div v-for="subcategory in category.subcategories">
-                    <a class="CategoriesButton-link" :href="`/catalog/${category.id}`">
+                    <a class="CategoriesButton-link" :href="`/catalog/${subcategory.id}`">
                     <div class="CategoriesButton-icon">
                       <img :src="subcategory.image.src" :alt="subcategory.image.alt"/>
                     </div>

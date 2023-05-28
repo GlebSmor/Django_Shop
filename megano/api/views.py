@@ -437,6 +437,7 @@ def profile(request):
 	return HttpResponse(status=500)
 
 def profilePassword(request):
+	print(request.data)
 	return HttpResponse(status=200)
 
 def orders(request):

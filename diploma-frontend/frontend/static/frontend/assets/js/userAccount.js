@@ -1,7 +1,7 @@
 var mix = {
     methods: {
         getUserAccount() {
-            this.getData("/api/account").then(data => {
+            this.getData("/api/account/").then(data => {
                 this.firstname = data.firstname
                 this.secondname = data.secondname
                 this.surname = data.surname

@@ -5,7 +5,7 @@ var mix = {
 			const orderId = location.pathname.startsWith('/payment/')
 				? Number(location.pathname.replace('/payment/', '').replace('/', ''))
 				: null
-			this.postData(`/api/payment/${orderId}`, {
+			this.postData(`/api/payment/${orderId}/`, {
 				name: this.name,
 				number: this.number,
 				year: this.year,

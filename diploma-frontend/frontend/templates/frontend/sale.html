@@ -23,7 +23,7 @@
 
           <!-- Получаем товар по скидке -->
           <div v-for="card in salesCards" class="Card">
-            <a :href="`/product/${card.id}`"><div class="Card-picture" >
+            <a :href="`/product/${card.product}`"><div class="Card-picture" >
               <img :src="card.images[0].src" :alt="card.images[0].alt"/>
             </div>
               <div v-if="card.dateFrom" class="Card-date">
