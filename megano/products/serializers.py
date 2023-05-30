@@ -45,6 +45,8 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_price(self, instance):
         salePrice = instance.sales.first()
         if salePrice:
+            instance.price = salePrice.salePrice
+            instance.save()
             return salePrice.salePrice
         return instance.price
     

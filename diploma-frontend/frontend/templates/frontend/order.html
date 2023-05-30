@@ -81,7 +81,7 @@
                 </div>
                 <div>
                   <label class="toggle">
-                    <input type="radio" v-model="deliveryType" name="delivery" value="express"/><span class="toggle-box"></span><span class="toggle-text">Экспресс доставка</span>
+                    <input type="radio" v-model="deliveryType" name="delivery" value="express"/><span class="toggle-box"></span><span class="toggle-text">Экспресс доставка +500$</span>
                   </label>
                 </div>
               </div>
@@ -194,17 +194,18 @@
                       </div>
                     </div>
                     <div class="Cart-block Cart-block_row">
-                      <div class="Cart-block Cart-block_amount">${ product.count }$ шт.
-                      </div>
+                      <div class="Cart-block Cart-block_amount">${ product.count }$ шт.</div>
+                      
                     </div>
                     </div>
                   </div>
+                  {% comment %} {% for  in  %}{% endfor %} {% endcomment %}
                   <!-- Товар на оплату -->
 
                   <div class="Cart-total">
                     <div class="Cart-block Cart-block_total">
                       <strong class="Cart-title">Итого:</strong>
-                      <span class="Cart-price">${ products.reduce((acc, el) => {return acc += (el.price * el.count)}, 0) }$$</span>
+                      <span class="Cart-price">${ totalCost }$$</span>
                     </div>
                     <div class="Cart-block">
                       <button class="btn btn_primary btn_lg" type="submit">Оплатить</button>

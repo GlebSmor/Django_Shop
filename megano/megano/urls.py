@@ -22,11 +22,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("frontend.urls")),
-    path("api/", include("api.urls")),
+    # path("api/", include("api.urls")),
     path("", include("catalog.urls")),
     path("", include("products.urls")),
     path("", include("users.urls")),
     path("", include("cart.urls")),
+    path("", include("orders.urls")),
 ]
 
 if settings.DEBUG:

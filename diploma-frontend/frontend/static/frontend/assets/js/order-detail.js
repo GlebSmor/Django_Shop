@@ -2,7 +2,7 @@ var mix = {
 	methods: {
 		getOrder(orderId) {
 			if(typeof orderId !== 'number') return
-			this.getData(`/api/order/${orderId}/`)
+			this.getData(`/api/orders/${orderId}/`)
 				.then(data => {
 					this.orderId = data.id
 					this.createdAt = data.createdAt
@@ -24,10 +24,10 @@ var mix = {
 		},
 		confirmOrder() {
 			if (this.orderId !== null) {
-				this.postData(`/api/order/${this.orderId}/`, { ...this })
+				this.postData(`/api/orders/${this.orderId}/`, { ...this })
 					.then(({ data: { orderId } }) => {
 						alert('Заказ подтвержден')
-						location.replace(`/payment/${orderId}/`)
+						location.replace(`/payment/${this.orderId}/`)
 					})
 					.catch(() => {
 						console.warn('Ошибка при подтверждения заказа')
