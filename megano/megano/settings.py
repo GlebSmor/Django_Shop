@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'frontend',
-    'api',
     'catalog.apps.CatalogConfig',
     'users.apps.UsersConfig',
     'products.apps.ProductsConfig',

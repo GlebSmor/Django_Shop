@@ -1,0 +1,688 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "title": "Телевизор LED DEXP F43H7000E черный",
+            "description": "FullHD, 1920x1080, 60 Гц, HDMI х 3, USB х 2 шт",
+            "fullDescription": "Телевизор LED DEXP F43H7000E предлагает востребованные функции для повседневного просмотра каналов. Он выполнен в корпусе с тонкой рамкой и устойчивой подставкой. На экране 43 дюйма FullHD отображается реалистичная картинка с четкостью воспроизведения деталей. Подсветка Direct LED обеспечивает передачу естественных и насыщенных оттенков.\r\nDEXP F43H7000E поддерживает диапазоны цифрового вещания DVB-C, DVB-S2, DVB-T, DVB-T2. С боковых сторон расположен ряд разъемов: 3 видеовыхода HDMI, 2 порта USB, входы для аудио. Качественный звук формируется двумя динамиками выходной мощностью 10 Вт.",
+            "price": "150.99",
+            "count": 10,
+            "date": "2023-06-02T19:13:02.129Z",
+            "freeDelivery": true,
+            "limited_edition": true,
+            "rating": "0.00",
+            "active": true,
+            "category": 1
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "title": "Телевизор LED Samsung LT32E315EX черный",
+            "description": "FullHD, 1920x1080, 60 Гц, HDMI х 2, USB х 1 шт",
+            "fullDescription": "Телевизор LED Samsung LT32E315EX представлен в черном корпусе с диагональю экрана 32\" (80 см). Он обладает базовыми функциями, позволяющими смотреть телеканалы в цифровом формате вещания. Для этого аппарат использует встроенные цифровые тюнеры DVB-T, DVB-T2, DVB-C: телеканалы доступны после автопоиска. Благодаря разъемам HDMI и USB вы получаете возможность подключать дополнительно видео технику, цифровые и мобильные устройства, чтобы воспроизводить непосредственно с них мультимедиа контент.\r\nДля установки Samsung LT32E315EX на поверхность используется устойчивая подставка. Наличие крепежных отверстий, соответствующих стандарту крепления VESA 200x200, на задней стороне корпуса открывают возможность фиксации аппарата на стене. Этот вариант будет наиболее оптимальным для пользователей, которые хотят сэкономить место в комнате. К тому же, при выборе функционального кронштейна можно будет регулировать положение экрана для более комфортного обзора. Изображение на экране обретает разрешение 1920x1080 благодаря формату Full HD.",
+            "price": "229.99",
+            "count": 12,
+            "date": "2023-06-02T19:14:27.356Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 1
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "title": "Телевизор LED Xiaomi MI TV A2 43 черный",
+            "description": "4K UltraHD, 3840x2160, DLNA, Wi-Fi, 60 Гц, Android TV, HDMI х 3, USB х 2 шт",
+            "fullDescription": "Благодаря изысканной металлической рамке и цельной конструкции Xiaomi TV A2 43 станет яркой деталью в любом интерьере. Дисплей 4K Ultra HD премиум-класса с технологией MEMC позволяет просматривать изображения в мельчайших деталях. Технология Motion Estimation, Motion Compensation (MEMC) делает изображения с высокой скоростью движения более плавными, обеспечивая просмотр без компромиссов. Это значит, что вы сможете запечатлеть больше прекрасных моментов, будь то спортивные соревнования, боевик или гоночная игра. Наслаждайтесь функционалом Smart TV на базе Android TV и встроенным Google Ассистентом. Конструкция с ультратонкой рамкой обеспечивает высокое соотношение размера экрана и корпуса, значительно превосходящее соотношение стандартных телевизоров. 2 стереодинамика мощностью по 12 Вт с технологиями Dolby Audio и DTS HD наполняют комнату насыщенными высокими и низкими частотами и обеспечивают объемное звучание.",
+            "price": "297.00",
+            "count": 15,
+            "date": "2023-06-02T19:15:37.291Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 2
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "title": "Телевизор LED TCL 65C735 черный",
+            "description": "QLED, 4K UltraHD, 3840x2160, DLNA, Wi-Fi, 120 Гц, Google TV, HDMI х 3, USB х 1 шт",
+            "fullDescription": "Телевизор LED TCL 65C735 привлекает внимание элегантным дизайном со съемной центральной подставкой и огромным 65-дюймовым экраном с 4K-разрешением. Встроенные технологии HDR улучшают яркость и передачу цвета, позволяют легко рассматривать оттенки, детали в светлых и темных сценах. Динамики с объемным многоканальным звуком доставляют максимум удовольствия от просмотра любимых фильмов.\r\nTCL 65C735 со Smart TV дополнен голосовым поиском и виртуальным ассистентом. Простая навигация по меню упрощает доступ к настройкам и установленным приложениям. Игровой телевизор с мощным процессором успешно заменяет монитор при подключении ПК через HDMI, точно отображает эффекты компьютерной графики и создает ощущение полного погружения.",
+            "price": "768.00",
+            "count": 4,
+            "date": "2023-06-02T19:16:49.612Z",
+            "freeDelivery": true,
+            "limited_edition": true,
+            "rating": "0.00",
+            "active": true,
+            "category": 2
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "title": "Телевизор LED Samsung UE32T5300AUXRU черный",
+            "description": "FullHD, 1920x1080, Wi-Fi, 60 Гц, Tizen, HDMI х 2, USB х 1 шт",
+            "fullDescription": "Телевизор LED Samsung UE32T5300AUXRU представлен в черном корпусе с диагональю экрана 32\" (80 см) и устанавливается на подставку, состоящую из двух элементов, расположенным по бокам. Для того чтобы начать пользование аппаратом, достаточно включить поиск программ. Вам не потребуется приобретать отдельно цифровую приставку, ведь на устройстве уже установлены тюнеры вещания, соответствующие стандартам DVB-T, DVB-C, а также DVB-T2 и DVB-S.\r\nИзображение на экране приобретает разрешение 1920х1080, которое соответствует формату Full HD. Объемное звучание на Samsung UE32T5300AUXRU обеспечивают динамики мощностью 10 Вт и технология Dolby Digital Plus: вы получаете громкий, насыщенный звук, который способствует погружению в происходящее на экране. Особенность аппарата в поддержке Wi-Fi, открывающего доступ к Smart TV. Система Tizen дает массу преимуществ пользователю, позволяя устройству работать быстрее, не тратя много времени на обработку процессов. Порт USB позволит подключать мобильную технику и накопители, а HDMI – видеотехнику.",
+            "price": "225.00",
+            "count": 8,
+            "date": "2023-06-02T19:17:59.154Z",
+            "freeDelivery": true,
+            "limited_edition": true,
+            "rating": "0.00",
+            "active": true,
+            "category": 2
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "title": "Монитор DEXP DF22N1 серебристый",
+            "description": "1920x1080 (FullHD)@75 Гц, VA, LED, 3000:1, 250 Кд/м², 170°/170°, HDMI 1.4, VGA (D-Sub), AMD FreeSync",
+            "fullDescription": "Монитор DEXP DF22N1 выполнен в тонком и стильном корпусе серебристого цвета с безрамочным дизайном. Модель предназначена для комфортной и эффективной работы при решении разных компьютерных задач. На экране 21.45 дюймов VA FullHD передается реалистичная картинка. Цветовой охват sRGB 100 % позволяет получать удовольствие от яркой картинки с красочными оттенками. Матовое покрытие и технологии защиты зрения создают комфортные условия для просмотра. Монитор DEXP DF22N1 оснащен разъемами HDMI и VGA, а также выходом на наушники. Конструкция подставки предусматривает удобную настройку положения экрана за счет регулировки угла наклона.",
+            "price": "85.00",
+            "count": 15,
+            "date": "2023-06-02T19:19:14.609Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 3
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "title": "Монитор Xiaomi Redmi Monitor черный",
+            "description": "1920x1080 (FullHD)@75 Гц, VA, LED, 3000:1, 300 Кд/м², 178°/178°, HDMI, VGA (D-Sub)",
+            "fullDescription": "Монитор Xiaomi Redmi Monitor обеспечивает реалистичное детализированное изображение для удобной работы в программах и погружения в мультимедийные развлечения. В нем установлен экран 21.5 дюйма с панелью VA FullHD. Антибликовое матовое покрытие и технологии защиты зрения делают просмотр максимально комфортным и безопасным. Xiaomi Redmi Monitor оснащен видеовыходами HDMI и VGA для подключения к источникам изображения. Настройка положения экрана обусловлена наличием в конструкции механизма регулировки угла наклона.",
+            "price": "90.00",
+            "count": 21,
+            "date": "2023-06-02T19:20:13.595Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 3
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "title": "Монитор Philips 271V8L черный",
+            "description": "1920x1080 (FullHD)@75 Гц, VA, LED, 3000:1, 250 Кд/м², 178°/178°, HDMI 1.4, VGA (D-Sub), Adaptive-Sync",
+            "fullDescription": "Широкоугольный монитор Philips 271V8L с диагональю экрана 27 дюймов порадует любого пользователя красочной картинкой и плавным отображением видеоряда. Устройство, устанавливаемое на устойчивую подставку, представлено в классическом черном цвете корпуса и может использоваться для оснащения компьютерного стола не только дома, но и в офисе. Поддержка технологии Adaptive-Sync в сочетании с частотой 75 Гц обеспечивает плавное воспроизведение видеоконтента, а трехсторонний безрамочный дизайн позволит испытать эффект полного погружения в происходящее на экране.\r\nЗа счет режима LowBlue и наличия матового покрытия на экране монитора Philips 271V8L значительно снижается нагрузка на глаза, в результате чего вы сможете проводить за ним весь рабочий день. Картинка, демонстрируемая на экране устройства, порадует высокой четкостью, красочностью и контрастностью благодаря разрешению 1920x1080 пикселей и технологии изготовления матрицы VA. Для подключения к компьютеру монитор располагает двумя видеоразъемами: HDMI и VGA (D-Sub). Также в комплекте поставки предусмотрен HDMI-кабель. Размеры устройства без учета подставки – 613x363x45 мм.",
+            "price": "160.00",
+            "count": 9,
+            "date": "2023-06-02T19:21:36.600Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 3
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "title": "Монитор Philips 272E1CA черный",
+            "description": "1920x1080 (FullHD)@75 Гц, VA, LED, 3000:1, 250 Кд/м², 178°/178°, DisplayPort 1.2, HDMI 1.4, VGA (D-Sub), AMD FreeSync",
+            "fullDescription": "Монитор Philips 272E1CA порадует своего обладателя невероятной четкостью картинки даже при быстрой смене кадров, ведь время отклика пикселя снижено до 4 мс. Углы обзора по вертикали и горизонтали возросли до 178 градусов – таким образом, вам не придется устраиваться прямо у монитора, если вы просматриваете киноленту большой компанией.\r\nКонфигурацией Philips 272E1CA предусмотрена матрица VA, отвечающая за детализацию и контрастность каждого изображения. Матовое покрытие экрана обеспечит преломление солнечных бликов, а также значительно снизит количество загрязнений. Благодаря встроенной акустической системе вам гарантировано насыщенное звучание как высоких, так и низких частот. А особая технология защиты предупредит риск возникновения ощущений дискомфорта даже при длительной эксплуатации устройства.",
+            "price": "205.00",
+            "count": 8,
+            "date": "2023-06-02T19:22:58.467Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 4
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "title": "Монитор ARDOR GAMING INFINITY AF27H1 черный",
+            "description": "1920x1080 (FullHD)@165 Гц, IPS, LED, 1000:1, 300 Кд/м², 178°/178°, DisplayPort 1.4 x2, HDMI 2.0 x2, AMD FreeSync Compatible, NVIDIA G-SYNC Compatible",
+            "fullDescription": "Игровой монитор ARDOR GAMING INFINITY AF27H1 в стильном черном корпусе оснащен экраном 27” с FullHD-разрешением и RGB-подсветкой. Поддержка HDR улучшает яркость и насыщенность картинки, отвечает за лучшую детализацию и четкость. Технологии AMD и NVIDIA гарантируют отсутствие зависания в динамичных сценах, улучшают точность управления персонажем. Защита от бликов, синего свечения и мерцания позволяет глазам меньше уставать при долгой игре за компьютером.\r\nARDOR GAMING INFINITY AF27H1 оснащен динамиками по 2 Вт, стандартным аудиоразъемом для наушников или колонок, 4 видеовыходами. Функциональная подставка позволяет наклонять, поднимать и опускать экран, работать в портретном режиме при повороте монитора на 90°. Модель идет в комплекте с набором кабелем в органайзере, фирменным стикером, отверткой и салфеткой.",
+            "price": "222.00",
+            "count": 5,
+            "date": "2023-06-02T19:23:53.851Z",
+            "freeDelivery": true,
+            "limited_edition": true,
+            "rating": "0.00",
+            "active": true,
+            "category": 4
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "title": "Монитор Samsung Odyssey Neo G9 S49AG950NI белый",
+            "description": "5120x1440@240 Гц, VA, miniLED, 1M:1, 420 Кд/м², 178°/178°, DisplayPort 1.4, HDMI 2.1 x2, USB х2 шт, AMD FreeSync Premium Pro, NVIDIA G-SYNC Compatible",
+            "fullDescription": "Монитор Samsung Odyssey Neo G9 S49AG950NI создан для погружения в игровой процесс. Он оборудован широкоформатным изогнутым экраном, в основе которого содержится панель VA 48.7 дюйма с подсветкой miniLED. Технология Quantum HDR обеспечивает передачу насыщенных, ярких и естественных оттенков. Благодаря отклику 1 мс и частоте 240 Гц исключается искажение и размытие динамичной графики. Возможности подключения Samsung Odyssey Neo G9 представлены 2 разъемами HDMI, разъемом DisplayPort, 2 портами USB для периферийных устройств. Эргономичная подставка предоставляет гибкие возможности настройки положения за счет поворота, регулировки высоты и угла наклона.",
+            "price": "1750.00",
+            "count": 4,
+            "date": "2023-06-02T19:25:26.038Z",
+            "freeDelivery": true,
+            "limited_edition": true,
+            "rating": "5.00",
+            "active": true,
+            "category": 4
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "title": "Проектор Cactus CS-PRE.09B.WVGA черный",
+            "description": "LCD, 800x480, 350:1, 1200 лм, 1.5 кг",
+            "fullDescription": "Проектор Cactus [CS-PRE.09B.WVGA] может похвастаться встроенным динамиком мощностью 3 Вт, благодаря которому обеспечивается насыщенное и четкое звучание без подключения дополнительных устройств. Трансляция контента с USB-накопителей и карт памяти возможна благодаря наличию соответствующих разъемов. Для доступа к параметрам достаточно воспользоваться пультом ДУ из комплекта.\r\nВ качестве основного элемента Cactus [CS-PRE.09B.WVGA] располагает LED-лампой, ресурс которой увеличен до 30000 часов. С этим проектором вы насладитесь невероятной детализацией и контрастностью каждой картинки, ведь максимальное разрешение увеличено до 800x480 пикселей.",
+            "price": "80.00",
+            "count": 10,
+            "date": "2023-06-02T19:28:36.039Z",
+            "freeDelivery": true,
+            "limited_edition": false,
+            "rating": "0.00",
+            "active": true,
+            "category": 5
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "title": "Проектор Epson EB-L200SW белый",
+            "description": "LCD, 1280x800, 2500000:1, 3800 лм, Wi-Fi, Ethernet, 28 дБ, 4.7 кг",
+            "fullDescription": "Лазерный дисплей Epson EB-L200SW – универсальное решение для создания высококачественного изображения на большом экране с возможностью беспроводного или проводного подключения.\r\nС EB-L200SW эффектные презентации возможны в помещении любого размера. Благодаря большому размеру дисплея и возможности менять его формат изображение можно просматривать со всех сторон, а участники могут делиться контентом прямо со своих устройств, что обеспечивает идеальные условия для совместной работы.",
+            "price": "2225.00",
+            "count": 4,
+            "date": "2023-06-02T19:29:36.085Z",
+            "freeDelivery": false,
+            "limited_edition": true,
+            "rating": "0.00",
+            "active": true,
+            "category": 5
+        }
+    },
+    {
+        "model": "products.productspecification",
+        "pk": 1,
+        "fields": {
+            "product": 11,
+            "name": "Screen resolution",
+            "value": "5120x1440"
+        }
+    },
+    {
+        "model": "products.productspecification",
+        "pk": 2,
+        "fields": {
+            "product": 11,
+            "name": "Screen diagonal",
+            "value": "49"
+        }
+    },
+    {
+        "model": "products.productspecification",
+        "pk": 3,
+        "fields": {
+            "product": 4,
+            "name": "Screen resolution",
+            "value": "3840x2160"
+        }
+    },
+    {
+        "model": "products.productspecification",
+        "pk": 4,
+        "fields": {
+            "product": 4,
+            "name": "Screen diagonal",
+            "value": "65"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 1,
+        "fields": {
+            "name": "img1",
+            "product": 1,
+            "image": "products/images/1/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 2,
+        "fields": {
+            "name": "img2",
+            "product": 1,
+            "image": "products/images/1/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 3,
+        "fields": {
+            "name": "img3",
+            "product": 1,
+            "image": "products/images/1/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 4,
+        "fields": {
+            "name": "img1",
+            "product": 2,
+            "image": "products/images/2/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 5,
+        "fields": {
+            "name": "img2",
+            "product": 2,
+            "image": "products/images/2/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 6,
+        "fields": {
+            "name": "img3",
+            "product": 2,
+            "image": "products/images/2/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 7,
+        "fields": {
+            "name": "img1",
+            "product": 3,
+            "image": "products/images/3/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 8,
+        "fields": {
+            "name": "img1",
+            "product": 4,
+            "image": "products/images/4/1.png.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 9,
+        "fields": {
+            "name": "img2",
+            "product": 4,
+            "image": "products/images/4/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 10,
+        "fields": {
+            "name": "img3",
+            "product": 4,
+            "image": "products/images/4/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 11,
+        "fields": {
+            "name": "img1",
+            "product": 5,
+            "image": "products/images/5/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 12,
+        "fields": {
+            "name": "img2",
+            "product": 5,
+            "image": "products/images/5/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 13,
+        "fields": {
+            "name": "img3",
+            "product": 5,
+            "image": "products/images/5/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 14,
+        "fields": {
+            "name": "img1",
+            "product": 6,
+            "image": "products/images/6/1.png.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 15,
+        "fields": {
+            "name": "img2",
+            "product": 6,
+            "image": "products/images/6/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 16,
+        "fields": {
+            "name": "img3",
+            "product": 6,
+            "image": "products/images/6/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 17,
+        "fields": {
+            "name": "img1",
+            "product": 7,
+            "image": "products/images/7/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 18,
+        "fields": {
+            "name": "img2",
+            "product": 7,
+            "image": "products/images/7/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 19,
+        "fields": {
+            "name": "img3",
+            "product": 7,
+            "image": "products/images/7/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 20,
+        "fields": {
+            "name": "img1",
+            "product": 8,
+            "image": "products/images/8/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 21,
+        "fields": {
+            "name": "img2",
+            "product": 8,
+            "image": "products/images/8/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 22,
+        "fields": {
+            "name": "img3",
+            "product": 8,
+            "image": "products/images/8/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 23,
+        "fields": {
+            "name": "img1",
+            "product": 9,
+            "image": "products/images/9/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 24,
+        "fields": {
+            "name": "img2",
+            "product": 9,
+            "image": "products/images/9/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 25,
+        "fields": {
+            "name": "img3",
+            "product": 9,
+            "image": "products/images/9/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 26,
+        "fields": {
+            "name": "img1",
+            "product": 10,
+            "image": "products/images/10/1.png.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 27,
+        "fields": {
+            "name": "img2",
+            "product": 10,
+            "image": "products/images/10/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 28,
+        "fields": {
+            "name": "img3",
+            "product": 10,
+            "image": "products/images/10/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 29,
+        "fields": {
+            "name": "img1",
+            "product": 11,
+            "image": "products/images/11/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 30,
+        "fields": {
+            "name": "img2",
+            "product": 11,
+            "image": "products/images/11/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 31,
+        "fields": {
+            "name": "img3",
+            "product": 11,
+            "image": "products/images/11/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 32,
+        "fields": {
+            "name": "img1",
+            "product": 12,
+            "image": "products/images/12/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 33,
+        "fields": {
+            "name": "img2",
+            "product": 12,
+            "image": "products/images/12/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 34,
+        "fields": {
+            "name": "img3",
+            "product": 12,
+            "image": "products/images/12/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 35,
+        "fields": {
+            "name": "img1",
+            "product": 13,
+            "image": "products/images/13/1.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 36,
+        "fields": {
+            "name": "img2",
+            "product": 13,
+            "image": "products/images/13/2.jpg.webp"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": 37,
+        "fields": {
+            "name": "img3",
+            "product": 13,
+            "image": "products/images/13/3.jpg.webp"
+        }
+    },
+    {
+        "model": "products.tag",
+        "pk": 1,
+        "fields": {
+            "name": "Monitor",
+            "product": [
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+            ]
+        }
+    },
+    {
+        "model": "products.tag",
+        "pk": 2,
+        "fields": {
+            "name": "TV",
+            "product": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "products.tag",
+        "pk": 3,
+        "fields": {
+            "name": "Projector",
+            "product": [
+                12,
+                13
+            ]
+        }
+    },
+    {
+        "model": "products.tag",
+        "pk": 4,
+        "fields": {
+            "name": "Gaming monitor",
+            "product": [
+                9,
+                10,
+                11
+            ]
+        }
+    },
+    {
+        "model": "products.tag",
+        "pk": 5,
+        "fields": {
+            "name": "Smart TV",
+            "product": [
+                3,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "products.review",
+        "pk": 1,
+        "fields": {
+            "author": "Alex",
+            "email": "alex@gmail.com",
+            "text": "The best monitor in my life 12/10",
+            "rate": 5,
+            "date": "2023-06-02T20:04:29.306Z",
+            "product": 11
+        }
+    },
+    {
+        "model": "products.sale",
+        "pk": 1,
+        "fields": {
+            "product": 11,
+            "salePrice": "1750.00",
+            "dateFrom": "2023-06-02",
+            "dateTo": "2023-06-15"
+        }
+    },
+    {
+        "model": "products.sale",
+        "pk": 2,
+        "fields": {
+            "product": 13,
+            "salePrice": "2225.00",
+            "dateFrom": "2023-06-02",
+            "dateTo": "2023-06-30"
+        }
+    }
+]

@@ -42,7 +42,7 @@ class LimitedList(APIView):
     
 class PopularList(APIView):
     def get(self, request: Request):
-        products = Product.objects.filter(active=True).annotate(count_reviews=Count('reviews')).order_by('-count_reviews')
+        products = Product.objects.filter(active=True).annotate(count_reviews=Count('reviews')).order_by('-count_reviews')[:8]
         serialized = ProductSerializer(products, many=True)
         return Response(serialized.data)
       

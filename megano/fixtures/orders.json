@@ -1,0 +1,38 @@
+[
+    {
+        "model": "orders.order",
+        "pk": 2,
+        "fields": {
+            "createdAt": "2023-06-02T20:02:51.548Z",
+            "user": 2,
+            "deliveryType": "express",
+            "paymentType": "online",
+            "totalCost": "2101.98",
+            "status": "Оплачен",
+            "city": "New York City",
+            "address": "Chrysler Building, 86",
+            "products": [
+                1,
+                11
+            ]
+        }
+    },
+    {
+        "model": "orders.countproductinorder",
+        "pk": 3,
+        "fields": {
+            "order": 2,
+            "product": 1,
+            "count": 2
+        }
+    },
+    {
+        "model": "orders.countproductinorder",
+        "pk": 4,
+        "fields": {
+            "order": 2,
+            "product": 11,
+            "count": 1
+        }
+    }
+]

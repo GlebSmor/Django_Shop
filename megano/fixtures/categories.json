@@ -1,0 +1,92 @@
+[
+    {
+        "model": "catalog.category",
+        "pk": 1,
+        "fields": {
+            "title": "TV",
+            "active": true,
+            "parent": null,
+            "favourite": false
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 2,
+        "fields": {
+            "title": "Smart TV",
+            "active": true,
+            "parent": 1,
+            "favourite": false
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 3,
+        "fields": {
+            "title": "Monitors",
+            "active": true,
+            "parent": null,
+            "favourite": false
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 4,
+        "fields": {
+            "title": "Gamimg Monitors",
+            "active": true,
+            "parent": 3,
+            "favourite": true
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 5,
+        "fields": {
+            "title": "Projectors",
+            "active": true,
+            "parent": null,
+            "favourite": false
+        }
+    },
+    {
+        "model": "catalog.categoryicon",
+        "pk": 1,
+        "fields": {
+            "src": "catalog/icons/TV/cat.jpg.webp",
+            "category": 1
+        }
+    },
+    {
+        "model": "catalog.categoryicon",
+        "pk": 2,
+        "fields": {
+            "src": "catalog/icons/TV/Smart TV/cat.jpg.webp",
+            "category": 2
+        }
+    },
+    {
+        "model": "catalog.categoryicon",
+        "pk": 3,
+        "fields": {
+            "src": "catalog/icons/Monitors/cat.jpg.webp",
+            "category": 3
+        }
+    },
+    {
+        "model": "catalog.categoryicon",
+        "pk": 4,
+        "fields": {
+            "src": "catalog/icons/Monitors/Gamimg Monitors/cat.jpg.webp",
+            "category": 4
+        }
+    },
+    {
+        "model": "catalog.categoryicon",
+        "pk": 5,
+        "fields": {
+            "src": "catalog/icons/Projectors/cat.jpg.webp",
+            "category": 5
+        }
+    }
+]

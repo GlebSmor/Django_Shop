@@ -39,6 +39,6 @@ class Order(models.Model):
 
 
 class CountProductinOrder(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.PROTECT)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
     count = models.PositiveIntegerField()

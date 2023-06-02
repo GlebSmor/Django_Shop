@@ -1,0 +1,38 @@
+[
+    {
+        "model": "users.avatar",
+        "pk": 1,
+        "fields": {
+            "profile": 1,
+            "image": "avatars/images/1/2023-04-05-1.jpg"
+        }
+    },
+    {
+        "model": "users.avatar",
+        "pk": 2,
+        "fields": {
+            "profile": 2,
+            "image": "avatars/images/2/prof.jpeg"
+        }
+    },
+    {
+        "model": "users.profile",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "fullName": "Admin",
+            "email": "admin@megano.com",
+            "phone": "+ 7 777 777 77"
+        }
+    },
+    {
+        "model": "users.profile",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "fullName": "Alex Smith",
+            "email": "alex@gmail.com",
+            "phone": "+ 1 111 1111 11"
+        }
+    }
+]

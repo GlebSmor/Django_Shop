@@ -5,7 +5,7 @@ from .models import (Product, ProductImage, Tag, Review,
 
 @admin.register(Product)
 class  ProductAdmin(admin.ModelAdmin):
-    list_display = "pk", "title", "price", "category"
+    list_display = "pk", "title", "price", "category", "active"
     list_display_links = "pk", "title"
     ordering = "pk",
     

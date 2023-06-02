@@ -26,7 +26,7 @@ class Orders(APIView):
         return Response(data)
     
     def get(self, request: Request):
-        data = Order.objects.all()
+        data = Order.objects.filter(user_id=request.user.profile.pk)
         serialized = OrderSerializer(data, many=True)
         return Response(serialized.data)
 
@@ -65,10 +65,10 @@ class OrderDetail(APIView):
         order.paymentType = data['paymentType']
         order.status = 'Ожидает оплаты'
         if data['deliveryType'] == 'express':
-            order.totalCost += 500
+            order.totalCost += 50
         else:
-            if order.totalCost < 2000:
-                order.totalCost += 200
+            if order.totalCost < 200:
+                order.totalCost += 20
 
         for product in data['products']:
             CountProductinOrder.objects.get_or_create(
