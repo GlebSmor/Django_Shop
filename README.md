@@ -1,31 +1,36 @@
-Для начала работы нужно создать виртуальное окружение и войт в него
+# MEGANO SHOP
+
+<h3 align="center">Интернет магазин по продаже техники
+</h3>
+Проект разработан на фреймворке Django. За отображение страниц отвечает приложение frontend, 
+
+а обращение за данными происходит по API, который реализован с использованием Django Rest Framework.
+
+## Установка и запуск проекта
+1. Клонировать репозиторий, создать и войти в виртуальное окружение
+2. `pip install -r requirements.txt` - установка зависимостей
+3. Установка frontend:
+    * `cd diploma-frontend && python setup.py sdist` - создание архива с библиотекой фронтенда
+    * `pip install ./dist/diploma-frontend-0.6.tar.gz` - установка фронтенда
+4. Создание бд и загрузка фикстур:
+    * `cd ../megano && python manage.py make migrations` - создание миграций
+    * `python manage.py migrate` - миграция 
+    * `python manage.py loaddata ./fixtures/* ` - установка фикстур
+5. `python manage.py runserver` - запуск сервера
 
 
-`pip install -r requirements.txt` - установка зависимостей
+В фикстурах созданы товары и заказы, а так же суперпользователь(админ) и обычный:
 
 
-Установка frontend:
+**superuser**
 
-`cd diploma-frontend`
+Логин: admin
 
-`python setup.py sdist`
-
-`pip install ./dist/diploma-frontend-0.6.tar.gz`
+Пароль: admin
 
 
-Создание бд и загрузка фикстур:
+**user**
 
-`python manage.py make migrations`
+Логин: Customer
 
-`python manage.py migrate`
-
-`python manage.py loaddata ./fixtures/users.json ./fixtures/profiles.json ./fixtures/products.json ./fixtures/categories.json  ./fixtures/orders.json `
-
-`python manage.py runserver`
-
-Login: 
-admin
-admin
-
-Customer
-Privet123
+Пароль: Privet123
