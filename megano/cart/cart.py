@@ -38,13 +38,13 @@ class Cart(object):
         self.session[settings.CART_SESSION_ID] = self.cart
         self.session.modified = True
 
-    def remove(self, product, count=1):
+    def remove(self, product, count):
         """
         Удаление продукта из корзины или уменьшение количества продукта.
         """
         product_id = str(product.id)
         if product_id in self.cart:
-            if count == 1:
+            if count == 1 and self.cart[product_id]['count'] > 1:
                 self.cart[product_id]['count'] -= int(count)
             else:
                 del self.cart[product_id]
